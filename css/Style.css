@@ -1,1 +1,521 @@
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
+/* GLOBAL */
+html,
+body{
+  max-width:100%;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#0b0b0f;
+  color:white;
+  line-height:1.5;
+}
+
+/* HERO */
+.hero{
+  padding:60px 20px;
+  text-align:center;
+
+  background:
+  linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+  );
+
+  box-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+
+  z-index:1000;
+
+  background:#111;
+
+  padding:15px;
+}
+
+.menu{
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  list-style:none;
+}
+
+.dropdown{
+  width:100%;
+  position:relative;
+}
+
+.menu-title{
+  color:yellow;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* GALERIE NAV */
+.mega-menu{
+  width:100%;
+
+  display:none;
+
+  padding:15px;
+
+  gap:15px;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  scroll-behavior:smooth;
+
+  background:#1e293b;
+
+  min-height:340px;
+}
+
+.mega-menu.active{
+  display:flex;
+}
+
+/* GALLERIES */
+.gallery{
+  display:flex;
+
+  gap:15px;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  padding:15px;
+
+  scroll-behavior:smooth;
+
+  background:#1e293b;
+
+  border-radius:15px;
+}
+
+/* SCROLLBAR */
+.gallery::-webkit-scrollbar,
+.mega-menu::-webkit-scrollbar{
+  height:8px;
+}
+
+.gallery::-webkit-scrollbar-thumb,
+.mega-menu::-webkit-scrollbar-thumb{
+  background:#22c55e;
+  border-radius:20px;
+}
+
+/* CARDS */
+.menu-item{
+  flex:0 0 220px;
+
+  min-height:320px;
+
+  background:#0b1220;
+
+  border-radius:15px;
+
+  overflow:hidden;
+
+  padding:12px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+
+  transition:.3s;
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,.3);
+}
+
+.menu-item:hover{
+  transform:translateY(-5px);
+}
+
+/* MEDIA */
+.menu-item img,
+.menu-item video{
+  width:100%;
+  height:180px;
+
+  object-fit:contain;
+
+  background:black;
+
+  border-radius:12px;
+
+  cursor:pointer;
+}
+
+/* TITRES */
+.menu-item h3{
+  margin-top:10px;
+  font-size:18px;
+  text-align:center;
+}
+
+.menu-item p{
+  margin:10px 0;
+  color:#d1d5db;
+  text-align:center;
+}
+
+/* BUTTONS */
+button{
+  padding:10px;
+
+  border:none;
+  border-radius:10px;
+
+  background:#22c55e;
+  color:white;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+button:hover{
+  background:#16a34a;
+  transform:scale(1.05);
+}
+
+/* SECTION */
+.section{
+  margin-top:50px;
+  padding:0 15px;
+}
+
+.section h2{
+  margin-bottom:20px;
+
+  color:#22c55e;
+
+  font-size:28px;
+}
+
+/* PANIER */
+.floating-cart{
+
+  position:fixed;
+
+  top:0;
+  right:-340px;
+
+  width:320px;
+  height:100vh;
+/*
+  background:rgba(17,24,39,0.85);
+
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);*/
+
+  border-left:1px solid rgba(255,255,255,0.1);
+
+  padding:20px;
+
+  z-index:9999;
+
+  transition:0.4s ease;
+
+  display:flex;
+  flex-direction:column;
+
+  box-shadow:-5px 0 20px rgba(0,0,0,0.5);  
+  
+  
+  
+  overflow:hidden;
+}
+
+/* OUVERTURE */
+.floating-cart.active{
+  right:0;
+}
+
+/* HEADER */
+.cart-header{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:20px;
+
+  border-bottom:1px solid #374151;
+
+  padding-bottom:10px;
+}
+
+.cart-header h2{
+  font-size:22px;
+}
+
+/* BOUTON FERMER */
+.close-cart{
+
+  background:#ef4444;
+
+  border:none;
+
+  width:35px;
+  height:35px;
+
+  border-radius:50%;
+
+  color:white;
+
+  cursor:pointer;
+
+  font-size:18px;
+}
+
+/* ITEMS */
+#cartItems{
+
+  flex:1;
+
+  overflow-y:auto;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:10px;
+
+  padding-right:5px;
+}
+
+/* PRODUIT */
+.cart-item{
+
+  background:#0b1220;
+
+  padding:12px;
+
+  border-radius:12px;
+
+  transition:0.3s;
+
+  cursor:pointer;
+}
+
+.cart-item:hover{
+  background:#1f2937;
+}
+
+/* TOTAL */
+.cart-total{
+
+  margin-top:15px;
+
+  text-align:center;
+
+  font-size:18px;
+  font-weight:bold;
+}
+
+/* BOUTON COMMANDER */
+.cart-order-btn{
+
+  margin-top:15px;
+
+  padding:14px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#22c55e;
+
+  color:white;
+
+  font-size:16px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.cart-order-btn:hover{
+  background:#16a34a;
+  transform:scale(1.03);
+}
+
+/* BOUTON FLOTTANT */
+.cart-toggle{
+
+  position:fixed;
+
+  top:50%;
+  right:15px;
+
+  transform:translateY(-50%);
+
+  width:60px;
+  height:60px;
+
+  border-radius:50%;
+
+  border:none;
+
+  background:#22c55e;
+
+  color:white;
+
+  font-size:24px;
+
+  cursor:pointer;
+
+  z-index:10000;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+
+  transition:0.3s;
+}
+
+.cart-toggle:hover{
+  transform:translateY(-50%) scale(1.1);
+}
+
+/* BADGE */
+.cart-count{
+
+  position:absolute;
+
+  top:-5px;
+  right:-5px;
+
+  width:22px;
+  height:22px;
+
+  border-radius:50%;
+
+  background:red;
+
+  color:white;
+
+  font-size:12px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* OVERLAY */
+.cart-overlay{
+
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,0.5);
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:0.3s;
+
+  z-index:9998;
+}
+
+.cart-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+/* FULLSCREEN */
+#fullscreenViewer{
+
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,0.95);
+
+  display:none;
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:20000;
+
+  padding:20px;
+}
+
+#fullscreenViewer img,
+#fullscreenViewer video{
+
+  max-width:95%;
+  max-height:95%;
+
+  object-fit:contain;
+
+  border-radius:15px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .floating-cart{
+    width:90vw;
+    right:-100vw;
+  }
+
+  .section h2{
+    font-size:22px;
+  }
+}
+
+/* Supprime l'effet bleu au clic sur mobile */
+img,
+.product img,
+.gallery img {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* Supprime les effets de focus/clic */
+img:focus,
+img:active,
+.product img:focus,
+.product img:active,
+.gallery img:focus,
+.gallery img:active {
+  outline: none;
+  box-shadow: none;
+}
+/* 0ptios boutons */
+
+.product-option{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:10px;
+  border:none;
+  background:#1f2937;
+  color:white;
+  font-size:16px;
+}
+option {
+  text-align: center ;
+  }
