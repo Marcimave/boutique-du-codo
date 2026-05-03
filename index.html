@@ -1,1 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace Pro</title>
 
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="hero">
+  <h1>🛒 Marketplace Pro</h1>
+  <p>Commandez directement des produits via WhatsApp</p>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+  <ul class="menu">
+
+    <li class="dropdown" id="menuToggle">
+
+      <span class="menu-title">
+        Voir les Ornements
+      </span>
+
+      <!-- GALERIE NAV -->
+      <div class="mega-menu" id="megaMenu">
+
+        <!-- PRODUITS -->
+        <div class="menu-item">
+          <img src="images/img_4.webp"
+               alt="Pins OPJ"
+               loading="lazy"
+               onclick="toggleFullscreen(this,event)">
+
+          <h3>Pins OPJ</h3>
+          <p>5 000 FCFA</p>
+
+          <button onclick="addToCart('Pins OPJ',5000,event)">
+            Ajouter
+          </button>
+        </div>
+
+        <div class="menu-item">
+          <img src="/images/img_6.webp"
+               alt="Écusson OPJ"
+               loading="lazy"
+               onclick="toggleFullscreen(this,event)">
+
+          <h3>Écusson OPJ</h3>
+          <p>5 000 FCFA</p>
+
+          <button onclick="addToCart('Écusson OPJ',5000,event)">
+            Ajouter
+          </button>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/img_3 .jpg"
+               alt="Jean D’arc"
+               loading="lazy"
+               onclick="toggleFullscreen(this,event)">
+
+          <h3>Jean D’arc</h3>
+          <p>10 000 FCFA</p>
+
+            <select class="product-option">
+  <option value="">Choisir couleur</option>
+  <option value="argentée">argentée</option>
+  <option value="dorée">dorée</option>
+</select>
+
+<button onclick="addToCart(
+  'Jean D’arc', 10000,
+  event,
+  this.previousElementSibling.value
+)">Ajouter</button>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/IMG-20260426-WA0030.jpg"
+               alt="Insignes"
+               loading="lazy"
+               onclick="toggleFullscreen(this,event)">
+
+          <h3>Insiges</h3>
+          <p>5 000 FCFA</p>
+
+          <button onclick="addToCart('Insiges',5000,event)">
+            Ajouter
+          </button>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/OPJ_BA.webp"
+               alt="OPJ BA"
+               loading="lazy"
+               onclick="toggleFullscreen(this,event)">
+
+          <h3>OPJ BA</h3>
+          <p>10 000 FCFA</p>
+
+          <button onclick="addToCart('OPJ BA',10000,event)">
+            Ajouter
+          </button>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/RG.webp"
+               alt="RG GENA"
+               loading="lazy"
+               onclick="toggleFullscreen(this,event)">
+
+          <h3>RG GENA</h3>
+          <p>5 000 FCFA</p>
+
+          <button onclick="addToCart('RG GENA',5000,event)">
+            Ajouter
+          </button>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/IMG-20260428-WA0055.jpg"
+               alt="Épingle de cravate"
+               loading="lazy"
+               onclick="toggleFullscreen(this,event)">
+
+          <h3>Épingle de cravate</h3>
+          <p>10 000 FCFA</p>
+
+          <button onclick="addToCart('Épingle de cravate',10000,event)">
+            Ajouter
+          </button>
+        </div>
+
+      </div>
+
+    </li>
+
+  </ul>
+
+</nav>
+
+<!-- VETEMENTS -->
+<section class="section">
+
+  <h2>Vêtements</h2>
+
+  <div class="gallery">
+
+    <div class="menu-item">
+      <img src="images/img_11.jpg"
+           alt="Tenue noire"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Tenue noire</h3>
+      <p>20 000 FCFA</p>
+    
+        <select class="product-option">
+  <option value="">Choisir taille</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+</select>
+
+<button onclick="addToCart(
+  'Tenue noire,
+  20000,
+  event,
+  this.previousElementSibling.value
+)">Ajouter</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/img_10.webp"
+           alt="Tenue verte"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Tenue verte</h3>
+      <p>20 000 FCFA</p>
+        <select class="product-option">
+  <option value="">Choisir taille</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+</select>
+
+<button onclick="addToCart(
+  'Tenue verte',
+  20000,
+  event,
+  this.previousElementSibling.value
+)">Ajouter</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/IMG-20260426-WA0036.jpg"
+           alt="Survêtement"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Survêtement</h3>
+      <p>18 000 FCFA</p>
+
+        <select class="product-option">
+  <option value="">Choisir taille</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+</select>
+
+<button onclick="addToCart(
+  'Survêtement',
+  18000,
+  event,
+  this.previousElementSibling.value
+)">Ajouter</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/img_2.webp"
+           alt="T-shirt"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>T-shirt</h3>
+      <p>5 000 FCFA</p>
+
+       <select class="product-option">
+  <option value="">Choisir taille</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+</select>
+
+<button onclick="addToCart(
+  'T-shirt', 5000,
+  event,
+  this.previousElementSibling.value
+)">
+  Ajouter
+</button><button onclick="addToCart('T-shirt',5000,event)">Ajouter</button>
+    </div>
+
+    <div class="menu-item">
+      <img src="images/IMG-20260428-WA0074.jpg"
+           alt="T-shirt noir gena"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>T-shirtnoir gena</h3>
+      <p>5 000 FCFA</p>
+
+      <select class="product-option">
+  <option value="">Choisir taille</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+</select>
+
+<button onclick="addToCart(
+  'T-shirt noir', 8000,
+  event,
+  this.previousElementSibling.value
+)">
+  Ajouter
+</button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CHAUSSURES -->
+<section class="section">
+
+  <h2>Chaussures</h2>
+
+  <div class="gallery">
+
+    <div class="menu-item">
+
+      <img src="images/img_1.webp"
+           alt="Chaussure"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Chaussure</h3>
+      <p>25 000 FCFA</p>
+
+        <select class="product-option">
+  <option value="">Choisir pointure</option>
+  <option value="S">S</option>
+  <option value="M">M</option>
+  <option value="L">L</option>
+  <option value="XL">XL</option>
+</select>
+
+<button onclick="addToCart(
+  'T-shirt noir', 8000,
+  event,
+  this.previousElementSibling.value
+)">Ajouter</button>
+    </div>
+
+    <div class="menu-item">
+      <img src=" "
+           alt="Rangers"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Rangers</h3>
+      <p></p>
+
+        <select class="product-option">
+  <option value="">Choisir pointure</option>
+  <option value="39-40">39-40</option>
+  <option value="41-42">41-42</option>
+  <option value="43-44">43-44</option>
+  <option value="45-46">45-45</option>
+</select>
+
+<button onclick="addToCart(
+  'Rangers', 000,
+  event,
+  this.previousElementSibling.value
+)">Ajouter</button>
+    </div>
+
+    <div class="menu-item">
+       <img src=" "
+           alt="Rangers"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Baskettes</h3>
+      <p></p>
+
+        <select class="product-option">
+  <option value="">Choisir taille</option>
+  <option value="39-40">39-40</option>
+  <option value="41-42">41-42</option>
+  <option value="43-44">43-44</option>
+  <option value="45-46">45-45</option>
+</select>
+
+<button onclick="addToCart(
+  'Baskettes', 000,
+  event,
+  this.previousElementSibling.value
+)">Ajouter</button> 
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CEINTURON -->
+<section class="section">
+
+  <h2>Ceinturon</h2>
+
+  <div class="gallery">
+
+    <div class="menu-item">
+
+      <video autoplay
+             muted
+             loop
+             preload="none"
+             onclick="toggleFullscreen(this,event)">
+
+        <source src="videos/vid_1.mp4"
+                type="video/mp4">
+      </video>
+
+      <p>Ceinturon</p>
+
+      <button onclick="addToCart('Ceinturon',18000,event)">
+        Ajouter
+      </button>
+    </div>
+
+    <div class="menu-item">
+
+      <img src="images/img_7.webp"
+           alt="Customizable"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Customizable</h3>
+      <p>15 000 FCFA</p>
+
+      <button onclick="addToCart('Customizable',15000,event)">
+        Ajouter
+      </button>
+    </div>
+
+    <div class="menu-item">
+
+      <img src="images/img_5.webp"
+           alt="Cuissière"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Cuissière</h3>
+      <p>15 000 FCFA</p>
+
+      <button onclick="addToCart('Cuissière',15000,event)">
+        Ajouter
+      </button>
+    </div>
+
+    <div class="menu-item">
+
+      <img src="images/IMG-20260428-WA0069.jpg"
+           alt="Ceinturon T.A.P"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Ceinturon T.A.P</h3>
+      <p>10 000 FCFA</p>
+
+      <button onclick="addToCart('Ceinturon T.A.P',10000,event)">
+        Ajouter
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- COIFFURES -->
+<section class="section">
+
+  <h2>Coiffures</h2>
+
+  <div class="gallery">
+
+    <div class="menu-item">
+
+      <img src="images/IMG-20260426-WA0035.jpg"
+           alt="Calot"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Calot</h3>
+      <p>20 000 FCFA</p>
+
+      <button onclick="addToCart('Calot',20000,event)">
+        Ajouter
+      </button>
+    </div>
+
+    <div class="menu-item">
+
+      <img src="images/casquette_pm.webp"
+           alt="Casquette P.M"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Casquette P.M</h3>
+      <p>10 000 FCFA</p>
+
+      <button onclick="addToCart('Casquette P.M',10000,event)">
+        Ajouter
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- DIVERS -->
+<section class="section">
+
+  <h2>Divers</h2>
+
+  <div class="gallery">
+
+    <div class="menu-item">
+
+      <img src="images/img-_12.jpg"
+           alt="Portefeuille OPJ"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Portefeuille OPJ</h3>
+      <p>10 000 FCFA</p>
+
+      <button onclick="addToCart('Portefeuille OPJ',10000,event)">
+        Ajouter
+      </button>
+    </div>
+
+    <div class="menu-item">
+
+      <img src="images/IMG-20260428-WA0071.jpg"
+           alt="Pochette à menottes"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Pochette à menottes</h3>
+      <p>5 000 FCFA</p>
+
+      <button onclick="addToCart('Pochette à menottes',5000,event)">
+        Ajouter
+      </button>
+
+    </div>
+
+    <div class="menu-item">
+
+      <img src="images/Port_pa.webp"
+           alt="Port P.A"
+           loading="lazy"
+           onclick="toggleFullscreen(this,event)">
+
+      <h3>Port P.A</h3>
+
+      <p>10 000 FCFA</p>
+
+      <button onclick="addToCart('Port P.A',10000,event)">
+        Ajouter
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BOUTON PANIER -->
+<button class="cart-toggle"
+        aria-label="Ouvrir le panier"
+        onclick="openCart()">
+
+  🛒
+
+  <span class="cart-count" id="cartCount">
+    0
+  </span>
+
+</button>
+
+<!-- OVERLAY -->
+<div class="cart-overlay"
+     id="cartOverlay"
+     onclick="closeCart()">
+</div>
+
+<!-- PANIER LATÉRAL -->
+<div class="floating-cart" id="floatingCart">
+
+  <div class="cart-header">
+
+    <h2>🛒 Panier</h2>
+
+    <button class="close-cart"
+            onclick="closeCart()">
+      ×
+    </button>
+
+  </div>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-total">
+    Total :
+    <span id="total">0</span>
+    FCFA
+  </div>
+
+  <button class="cart-order-btn"
+          onclick="checkout()">
+    💬 Commander
+  </button>
+
+</div>
+
+<!-- FULLSCREEN VIEWER -->
+<div id="fullscreenViewer"></div>
+
+<script src="js/app.js"></script>
+
+</body>
+  </html>
