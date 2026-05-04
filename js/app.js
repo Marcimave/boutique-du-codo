@@ -258,3 +258,11 @@ function closeCart(){
   .getElementById("cartOverlay")
   .classList.remove("active");
 }
+// audio
+
+const music = document.getElementById("music");
+const btn = document.getElementById("playBtn");
+
+btn.addEventListener("click", () => {
+  music.play();
+});
